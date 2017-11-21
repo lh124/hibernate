@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-11-21 18:56:49 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="cn.lh.hibernate.pojo.Member" table="member" catalog="mldns" optimistic-lock="version">
+        <id name="mid" type="java.lang.Long">
+            <column name="mid" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <property name="salary" type="java.lang.Double">
+            <column name="salary" precision="22" scale="0" />
+        </property>
+        <property name="birthday" type="date">
+            <column name="birthday" length="10" />
+        </property>
+        <property name="note" type="string">
+            <column name="note" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>
